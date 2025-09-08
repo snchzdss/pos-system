@@ -29,6 +29,7 @@ $stmt = $pdo->prepare("SELECT id, username, password, role FROM users WHERE user
 $stmt->execute([$username]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+//check whether the user exists or the user has the correct password in the database
 if (!$user || $password !== $user['password']) {
     $_SESSION['error'] = "Invalid username or password.";
     header("Location: ../pages/login.php");

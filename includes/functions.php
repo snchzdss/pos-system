@@ -25,7 +25,7 @@ function is_logged_in(){
 
 function require_login() : void{
     if (!is_logged_in()){
-        header("Location: index.php");
+        header("Location: /../pages/login.php");
         exit;
     }
 }
