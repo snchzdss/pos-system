@@ -59,7 +59,7 @@
                 <div class="alert alert-danger py-2" role = "alert"><?= htmlspecialchars($error) ?></div>
             <?php endif; ?>
 
-            <form action="process_login.php" method="post" novalidate>
+            <form action="../api/process_login.php" method="post" novalidate>
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($token);?>">
                 <div class="form-group mb-3">
                     <label for="username" class="mb-1">Username</label>

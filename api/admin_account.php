@@ -17,6 +17,7 @@
 
         $insert = $pdo->prepare("INSERT INTO users (username, password, role) VALUES(?, ?, ?)");
         $insert->execute([$username, $password, $role]);
+
         echo "Admin account succesfully created.";
     }
 
